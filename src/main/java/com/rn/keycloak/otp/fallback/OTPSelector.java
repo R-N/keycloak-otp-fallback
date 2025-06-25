@@ -45,7 +45,7 @@ public class OTPSelector implements Authenticator {
         
         if (showOptions){
             Response challenge = prepareForm(context)
-                .createForm("login.ftl");
+                .createForm("otp-selector.ftl");
             context.challenge(challenge);
         }else{
             context.getAuthenticationSession().setAuthNote(SELECTED_METHOD, defaultMethod);
@@ -89,7 +89,7 @@ public class OTPSelector implements Authenticator {
         if (selectedMethod == null || !methods.contains(selectedMethod)) {
             Response challenge = prepareForm(context)
                 .setError("Invalid selection")
-                .createForm("login.ftl");
+                .createForm("otp-selector.ftl");
             context.challenge(challenge);
             return;
         }
