@@ -1,0 +1,3 @@
+com.rn.keycloak.otp.fallback.OTPSelectorFactory
+com.rn.keycloak.otp.fallback.OTPConditionFactory
+com.rn.keycloak.otp.fallback.OTPFailureTrackerFactory
